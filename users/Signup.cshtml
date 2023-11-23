@@ -1,0 +1,85 @@
+﻿@page
+@model TICKETS.Pages.users.SignupModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TICKETS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TICKETS.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Home - Booking Tickets</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/lib/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Append
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<div class="Container">
+    <div class="alert alert-info">
+        @if(@Model.message.Length > 1)
+        {
+            <span>@Model.message</span>
+        }
+        <br /><br /><br /><br /><br />
+    </div>
+    <div class="form-row">
+        <form method="post">
+
+            <div class="form-group col-md-8">
+                <label for="email">UserName:</label>
+                <input type="text" class="form-control" id="name" name="username">
+            </div>
+            <div class="form-group col-md-8">
+                <label for="inputState">Gender</label>
+                <select id="inputState" class="form-control" name="gender">
+                    <option selected>Choose...</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Not Specfied</option>
+                </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+            <div class="form-group col-md-8">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="password">
+            </div>
+            <div class="form-group col-md-8">
+                <label for="pwd">Date Of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>

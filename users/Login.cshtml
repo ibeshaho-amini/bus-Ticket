@@ -1,0 +1,38 @@
+﻿@page
+@model TICKETS.Pages.users.LoginModel
+@{
+}
+
+
+<div class="Container">
+    <div class="alert alert-info">
+        @if (@Model.message.Length > 1)
+        {
+            <span>@Model.message</span>
+        }
+        <br /><br /><br /><br /><br />
+    </div>
+    <div class="form-row">
+        <form method="post">
+            <div class="form-group col-md-8">
+                <label for="inputState">Role</label>
+                <select id="inputState" class="form-control" name="role">
+                    <option selected>Choose...your role</option>
+                    <option>CLient</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+            <div class="form-group col-md-8">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="password">
+            </div>
+            
+            <button type="submit" class="btn btn-default">Login</button>
+        </form>
+    </div>
+</div>
